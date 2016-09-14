@@ -4,7 +4,7 @@ public class TestMemory {
 	private int id;
 
 	public TestMemory(int id) {
-		super();
+		super(); 
 		this.id = id;
 	}
 
