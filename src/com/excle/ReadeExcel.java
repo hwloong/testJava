@@ -15,7 +15,8 @@ import org.junit.Test;
 
 public class ReadeExcel<T> {
 
-	public List<T> readeExcel(String[] headTitle, FileInputStream in ,Class class_) {
+	public List<T> readeExcel(String[] headTitle, FileInputStream in,
+			Class class_) {
 		List list = new ArrayList();
 		try {
 			// 创建工作簿对象
@@ -30,7 +31,6 @@ public class ReadeExcel<T> {
 				// 单元格
 				Object obj = class_.newInstance();
 				for (int j = 0; j < headTitle.length; j++) {
-
 					XSSFCell cell = row.getCell(j);
 					cell.setCellType(Cell.CELL_TYPE_STRING);
 					String callvalue = cell.getStringCellValue();
@@ -42,10 +42,8 @@ public class ReadeExcel<T> {
 							String.class);
 					getMethod.invoke(obj, callvalue);
 				}
-				list.add((T)obj);
-
+				list.add((T) obj);
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -55,25 +53,23 @@ public class ReadeExcel<T> {
 
 	@Test
 	public static void main(String args[]) {
-		
 		ReadeExcel<Person> re = new ReadeExcel<Person>();
 		String[] headTitle = new String[] { "name", "age", "mobile" };
-		
 		FileInputStream in = null;
 		try {
 			in = new FileInputStream("d:/exceltext.xlsx");
-			re.readeExcel(headTitle,in, Person.class);
+			List<Person> personList = re
+					.readeExcel(headTitle, in, Person.class);
+			System.out.println(personList);
 		} catch (Exception e) {
-			// TODO: handle exception
-		}finally{
+			e.printStackTrace();
+		} finally {
 			try {
 				in.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
 
 	}
 }
