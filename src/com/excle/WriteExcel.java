@@ -13,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
-
+//  sheet.autoSizeColumn((short)0);
 public class WriteExcel<T> {
 
 	public void writeExcel(String[] headTitle, List<T> dateList) {
