@@ -1,4 +1,4 @@
-package com.proxy;
+package com.designpatterns.proxy;
 
 public class TankLog implements Moveable {
 public Moveable tank;

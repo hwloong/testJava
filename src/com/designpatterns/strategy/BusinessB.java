@@ -1,4 +1,4 @@
-package com.designpatterns.Strategy;
+package com.designpatterns.strategy;
 
 public class BusinessB implements IDoAnything {
 

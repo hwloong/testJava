@@ -1,4 +1,4 @@
-package com.proxy.dongtai;
+package com.designpatterns.proxy.dongtai;
 
 public interface Moveable {
 

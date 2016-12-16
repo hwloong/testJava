@@ -1,4 +1,4 @@
-package com.proxy;
+package com.designpatterns.proxy.dongtai;
 
 import java.util.Random;
 

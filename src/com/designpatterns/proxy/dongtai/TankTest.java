@@ -1,4 +1,4 @@
-package com.proxy.dongtai;
+package com.designpatterns.proxy.dongtai;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;

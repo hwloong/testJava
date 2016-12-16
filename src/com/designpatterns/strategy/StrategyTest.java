@@ -1,4 +1,4 @@
-package com.designpatterns.Strategy;
+package com.designpatterns.strategy;
 
 import org.junit.Test;
 
