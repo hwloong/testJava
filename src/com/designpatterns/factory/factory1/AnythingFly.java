@@ -1,4 +1,4 @@
-package com.factorytest.factory1;
+package com.designpatterns.factory.factory1;
 
 public interface AnythingFly {
 

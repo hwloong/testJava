@@ -8,5 +8,7 @@ public class StrategyTest {
 	public void test(){
 		BusinessContext bc = new BusinessContext(new BusinessA());
 		bc.doAnything();
+		BusinessContext bc1 = new BusinessContext(new BusinessB());
+		bc1.doAnything();
 	}
 }
