@@ -1,6 +1,9 @@
 package com.reflect;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 
 import org.junit.Test;
 public class TestRefect {
@@ -43,7 +46,44 @@ public class TestRefect {
 		
 	}
 	
-	
+	@Test
+	public void test4(){
+		Class c = null;
+		try {
+			c = Class.forName("com.reflect.Persion");
+			Object obj = (Persion) c.newInstance();
+			  //获取所有的属性?  
+            Field[] fs = c.getDeclaredFields(); 
+            for(Field f : fs){
+            	System.out.println(Modifier.toString(f.getModifiers())+" "+f.getType().getSimpleName() + " " + f.getName());//修饰符
+            }
+            //获取所以的方法
+            Method methodAll[] = c.getDeclaredMethods();
+            for(Method m : methodAll){
+            	System.out.print(m.getReturnType().getSimpleName()+" "+m.getName() +" (");
+            	Class param[] = m.getParameterTypes();
+            	for(Class p : param){
+            		System.out.print(p.getSimpleName() + " arg");
+            	}
+            	System.out.println(")");
+            }
+            //调用某个类的方法
+            Method method = c.getMethod("setUserName",String.class);
+            method.invoke(obj, "Test");
+            System.out.println(obj.toString());
+            //对属性赋值
+            Field field = c.getDeclaredField("userName");
+            field.setAccessible(true);
+            field.set(obj, "TOM");
+            System.out.println(obj.toString());
+            //使用动态代理
+            
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	
 	
 	

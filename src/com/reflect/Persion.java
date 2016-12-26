@@ -1,6 +1,6 @@
 package com.reflect;
 
-public class Persion {
+public class Persion implements IPsrsion{
 
 	public Persion() {
 		super();
@@ -36,6 +36,11 @@ public class Persion {
 	@Override
 	public String toString() {
 		return "Persion [userName=" + userName + ", age=" + age + "]";
+	}
+
+	@Override
+	public void say() {
+		toString();
 	}
 	
 	
