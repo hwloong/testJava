@@ -42,8 +42,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", mobile=" + mobile
-				+ "]";
+		return "Person [name=" + name + ", age=" + age + ", mobile=" + mobile + ", address=" + address + "]";
 	}
 
 	public String getAddress() {
