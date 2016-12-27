@@ -13,7 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
 
-public class ReadeExcel<T> {
+public class ReadExcel<T> {
 
 	public List<T> readeExcel(String[] headTitle, FileInputStream in,
 			Class class_) {
@@ -53,7 +53,7 @@ public class ReadeExcel<T> {
 
 	@Test
 	public static void main(String args[]) {
-		ReadeExcel<Person> re = new ReadeExcel<Person>();
+		ReadExcel<Person> re = new ReadExcel<Person>();
 		String[] headTitle = new String[] { "name", "age", "mobile" };
 		FileInputStream in = null;
 		try {

@@ -78,6 +78,14 @@ public class TestRefect {
             System.out.println(obj.toString());
             //使用动态代理
             
+            
+            
+            
+            //调用某个类的方法
+            Method method1 = c.getMethod("getUserName",String.class);
+            method.invoke(obj,"");
+            System.out.println(obj.toString());
+            
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

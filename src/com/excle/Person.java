@@ -1,13 +1,19 @@
 package com.excle;
 
+import com.excle.useannotatoin.ExcelAnnotation;
+
 public class Person {
 
+	@ExcelAnnotation(title = "姓名")
 	private String name;
 	
+	@ExcelAnnotation(title = "年龄")
 	private String age;
 	
+	@ExcelAnnotation(title = "手机号")
 	private String mobile;
 	
+	@ExcelAnnotation(title = "地址")
 	private String address;
 
 	public String getName() {
