@@ -10,9 +10,10 @@ public class TestMemoryMain {
 		System.out.println(m.getId());
 	}
 	
-	public void change(TestMemory t){
+	public void change(final TestMemory t){
 		System.out.println(t);
-		t = new TestMemory(10);
+		//t = new TestMemory(10);
+		t.setId(199);
 		System.out.println(t);
 		System.out.println(t.getId());
 	}
