@@ -2,7 +2,11 @@ package com.enumtest;
 
 public enum Typetest {
 	
-	Tt("1","a");
+	Tt("1","a"),
+	
+	T1("2","b");
+	
+	
 
 	private String s1;
 	
